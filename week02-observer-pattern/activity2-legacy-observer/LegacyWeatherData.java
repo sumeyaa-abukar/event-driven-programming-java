@@ -1,0 +1,29 @@
+
+import java.util.Observable;
+
+// Legacy Subject using java.util.Observable
+@SuppressWarnings("deprecation")
+public class LegacyWeatherData extends Observable {
+
+    private float temperature;
+    private float humidity;
+
+    public void setMeasurements(float temperature, float humidity) {
+        this.temperature = temperature;
+        this.humidity = humidity;
+
+        // Mark the object as changed
+        setChanged();
+
+        // Notify all registered observers
+        notifyObservers();
+    }
+
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+}

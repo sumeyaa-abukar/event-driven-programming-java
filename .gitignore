@@ -1,0 +1,6 @@
+*.class
+**/target/
+**/build/
+**/nbproject/private/
+.vscode/
+**/.vscode/
